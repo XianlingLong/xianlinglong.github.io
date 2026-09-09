@@ -60,9 +60,14 @@ body{
 main{max-width:64rem; margin:0 auto; padding:3.5rem 1.6rem 4rem}
 h1{font-size:2.1rem; line-height:1.2; margin:0 0 .3rem; letter-spacing:-.01em}
 .subtitle{color:var(--muted); font-size:1.05rem; margin:0}
-.hero{display:flex; align-items:center; justify-content:space-between; gap:1.8rem; margin-bottom:1.8rem}
-.portrait{width:8.5rem; height:8.5rem; object-fit:cover; border-radius:12px; flex-shrink:0}
-@media (max-width:560px){.hero{flex-direction:column-reverse; align-items:flex-start}}
+.intro{display:flex; align-items:stretch; gap:2.8rem}
+.intro-main{flex:1; min-width:0}
+.subtitle{margin-bottom:1.4rem}
+.portrait{width:15rem; align-self:stretch; object-fit:cover; border-radius:12px; flex-shrink:0}
+@media (max-width:640px){
+  .intro{flex-direction:column-reverse; align-items:flex-start; gap:1.4rem}
+  .portrait{width:11rem; align-self:flex-start; height:auto}
+}
 h2{font-size:1.25rem; margin:2.6rem 0 1rem; padding-bottom:.4rem; border-bottom:1px solid var(--rule)}
 a{color:var(--link); text-decoration:underline;
   text-decoration-color:color-mix(in srgb, var(--link) 45%, transparent);
@@ -89,23 +94,24 @@ footer{margin-top:3.5rem; padding-top:1rem; border-top:1px solid var(--rule);
 </head>
 <body>
 <main>
-  <header class="hero">
-    <div>
-      <h1>Xianling Long</h1>
-      <p class="subtitle">Assistant Professor of Economics · National School of Development, Peking University</p>
-    </div>
-    <img class="portrait" src="photo.jpg" alt="Xianling Long">
-  </header>
-
-  <section id="about" aria-label="About">
-    <p>I am an Assistant Professor of Economics at the National School of Development, Peking University. I received my Ph.D. from Stanford University and hold bachelor's and master's degrees from Peking University.</p>
-    <p>I work in environmental economics. Recent projects focus on climate change impacts, carbon trading markets, electric vehicles, and energy markets.</p>
-    <p class="contact">
+  <div class="intro">
+    <div class="intro-main">
+      <header>
+        <h1>Xianling Long</h1>
+        <p class="subtitle">Assistant Professor of Economics · National School of Development, Peking University</p>
+      </header>
+      <section id="about" aria-label="About">
+        <p>I am an Assistant Professor of Economics at the National School of Development, Peking University. I received my Ph.D. from Stanford University and hold bachelor's and master's degrees from Peking University.</p>
+        <p>I work in environmental economics. Recent projects focus on climate change impacts, carbon trading markets, electric vehicles, and energy markets.</p>
+        <p class="contact">
       <a href="mailto:xianlinglong@nsd.pku.edu.cn">xianlinglong@nsd.pku.edu.cn</a>
       <a href="https://scholar.google.com/citations?user=RkCdTQgAAAAJ">Google Scholar</a>
       <a href="https://www.nber.org/people/xianling_long">NBER</a>
-    </p>
-  </section>
+        </p>
+      </section>
+    </div>
+    <img class="portrait" src="photo.jpg" alt="Xianling Long">
+  </div>
 
   <section id="papers">
     <h2>Papers</h2>
